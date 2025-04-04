@@ -19,6 +19,9 @@ TODO:
 import type {SchemaType} from '../CodegenSchema';
 
 const schemaValidator = require('../SchemaValidator.js');
+const {
+  generateSupportedApplePlatformsMacro,
+} = require('./components/ComponentsProviderUtils');
 const generateComponentDescriptorCpp = require('./components/GenerateComponentDescriptorCpp.js');
 const generateComponentDescriptorH = require('./components/GenerateComponentDescriptorH.js');
 const generateComponentHObjCpp = require('./components/GenerateComponentHObjCpp.js');
@@ -335,4 +338,5 @@ module.exports = {
 
     return result.value;
   },
+  generateSupportedApplePlatformsMacro,
 };
